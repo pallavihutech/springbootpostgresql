@@ -53,8 +53,8 @@ public class DailyExpenseController {
 		  return new DailyExpenseJsonResponse("Expense deleted",200);
 		
 	}
-	@PutMapping("/update")
-	public DailyExpenseJsonResponse updateExpense(@RequestBody DailyExpense dailyExpense)
+	@PutMapping("/update/{id}")
+	public DailyExpenseJsonResponse updateExpense(@PathVariable int id,@RequestBody DailyExpense dailyExpense)
 	{
 		dailyExpenseService.save(dailyExpense);
 		return new DailyExpenseJsonResponse("Expense table updated Successfully",300);
