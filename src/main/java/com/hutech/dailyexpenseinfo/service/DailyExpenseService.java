@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.hutech.dailyexpenseinfo.model.DailyExpense;
 import com.hutech.dailyexpenseinfo.repository.DailyExpenseRepository;
+
 @Service
 public class DailyExpenseService {
 	@Autowired
@@ -29,14 +30,13 @@ public class DailyExpenseService {
 	}
 
 	public String deleteExpense(int id) {
-		  dailyExpenseRepository.deleteById(id);
-		  return "deleted";
-		
+		dailyExpenseRepository.deleteById(id);
+		return "deleted";
 
 	}
 
 	public List<DailyExpense> findAll() {
-		
+
 		return dailyExpenseRepository.findAll();
 	}
 
