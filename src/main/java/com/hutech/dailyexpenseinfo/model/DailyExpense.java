@@ -21,6 +21,7 @@ public class DailyExpense {
 	private double amount;
 	private int quantity;
 	private double total;
+	private String status;
 
 	public String getExpenseName() {
 		return expenseName;
@@ -91,7 +92,7 @@ public class DailyExpense {
 	}
 
 	public DailyExpense(String expenseName, String paidBy, String paidTo, String date, String description,
-			String modeOfPayment, double amount, int quantity, double total, int id) {
+			String modeOfPayment, double amount, int quantity, double total, int id,String status) {
 
 		this.expenseName = expenseName;
 		this.paidBy = paidBy;
@@ -103,6 +104,7 @@ public class DailyExpense {
 		this.quantity = quantity;
 		this.total = total;
 		this.id = id;
+		this.status=status;
 	}
 
 	public int getId() {
@@ -116,6 +118,14 @@ public class DailyExpense {
 	public DailyExpense() {
 		super();
 
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }
